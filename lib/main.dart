@@ -39,7 +39,7 @@ class FPage extends StatelessWidget {
          child: TextField(
          controller: _textcntrl,
          decoration:const InputDecoration (
-             labelText: "Enter any command",
+             labelText: "Type any command",
              focusColor: Colors.lightBlue,
               contentPadding: EdgeInsets.all(15),
               border: OutlineInputBorder()
