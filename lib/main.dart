@@ -1,78 +1,44 @@
 import 'package:flutter/material.dart';
-void main() => runApp(const MyApp());
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+
+void main() => runApp(const landpage());
+
+class landpage extends StatelessWidget {
+  const landpage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: ("Sulav sapkota"),
-      color: Colors.blue[250],
-      home: const FPage(),
+      title: 'Sulav',
+      home: const page1(),
     );
   }
 }
-class FPage extends StatelessWidget {
-  const FPage({super.key});
+
+class page1 extends StatelessWidget {
+  const page1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Welcome Sir,"),
-        backgroundColor: Colors.blue[200],
-      ),
-      body: Sarir(),
-    );
-
+        appBar: AppBar(
+          title: Text("DOTM Nepal."),
+        ),
+        body:new();
   }
 }
- class Sarir extends StatelessWidget {
-    Sarir({super.key});
-   final TextEditingController _textcntrl = TextEditingController();
 
-    @override
-   Widget build(BuildContext context) {
-     return Column(
-       children:[
-         Padding(padding: const EdgeInsets.all(10),
-         child: TextField(
-         controller: _textcntrl,
-         decoration:const InputDecoration (
-             labelText: "Type any command",
-             focusColor: Colors.lightBlue,
-              contentPadding: EdgeInsets.all(15),
-              border: OutlineInputBorder()
-         ),
-       ) ,
-         ),
-         ElevatedButton(
-           child: const Text("Execuite command."),
-           onPressed: () {
-             _savebtn(context); // Pass context to the function
-           },
-         )
-       ],
-     );
-   }
- }
+class new extends StatefulWidget {
+  const new({super.key});
 
- void _savebtn(BuildContext context){
-  showDialog(
-      context: context,
-      builder: (BuildContext context) {
-    return AlertDialog(
-        title: const Text("Command Execution"),
-        content: const Text("I am on it sir."),
-        actions: [
-    TextButton(
-    child: const Text("OK"),
-   onPressed: () {
-   Navigator.of(context).pop(); // Close the dialog
-   },
-   )
-        ]
-   );
-      }
-   );
+  @override
+  State<new> createState() => _newState();
+}
+
+class _newState extends State<new> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder(
+
+    );
+  }
 }
